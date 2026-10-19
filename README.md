@@ -1,10 +1,10 @@
 ## The problem
 
-EU institutions publish contract-agent vacancies continuously, and application windows can be short. Checking the website by hand every day is tedious and easy to forget, and missing a posting by a few days can mean missing it entirely. I wanted to be told, not to remember to look.
+EU institutions publish contract-agent vacancies continuously, and application windows can be short. Checking the website by hand every day is tedious and easy to forget, and missing a posting by a few days can mean missing it entirely. 
 
 ## The solution
 
-A small Python script that runs by itself every day on GitHub Actions (free, no server, works with my laptop off). If there is something new for my grade, I get an email with everything I need to decide quickly: title, institution, city, contract type, grade and application deadline, sorted by deadline. If there is nothing new, it stays silent.
+A small Python script that runs by itself every day on GitHub Actions (free, no server, works with my laptop off). If there is something new for my grade (FG III), I get an email with everything I need to decide quickly: title, institution, city, and application deadline, sorted by deadline. If there is nothing new, it stays silent.
 
 ![Example of the daily alert email](Output.png)
 
@@ -51,7 +51,7 @@ flowchart LR
 | `eu_jobs_monitor.py` | The script |
 | `examples/monitor.yml` | The GitHub Actions workflow I use. It lives in `examples/` so it does not run in this public repository; copy it to `.github/workflows/` in your own copy |
 
-## Run it yourself
+## Run it
 
 Try it locally (prints what it finds, sends no email, saves nothing):
 
