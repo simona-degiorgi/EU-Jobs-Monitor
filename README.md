@@ -6,6 +6,10 @@ EU institutions publish contract-agent vacancies continuously, and application w
 
 A small Python script that runs by itself every day on GitHub Actions (free, no server, works with my laptop off). If there is something new for my grade, I get an email with everything I need to decide quickly: title, institution, city, contract type, grade and application deadline, sorted by deadline. If there is nothing new, it stays silent.
 
+![Example of the daily alert email](Output.png)
+
+Example of the daily alert email (sent in Italian by my own configuration)
+
 **Stack:** Python 3.12 (standard library only) · GitHub Actions (cron) · Gmail SMTP
 
 ## How it works
@@ -54,6 +58,10 @@ Try it locally (prints what it finds, sends no email, saves nothing):
 ```
 python eu_jobs_monitor.py --dry-run
 ```
+
+![Dry run output](Dry_run_output.png)
+
+*Example output of a dry run.*
 
 To run it daily on GitHub Actions:
 
